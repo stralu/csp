@@ -108,9 +108,9 @@ duration=trainingwindowlength;
 
 for i=1:2,
 
-    for trial=1:ALLEEG(i).trials,
+    for trial=1:ALLEEG(setlist(i)).trials,
 
-        % fprintf('\rProcessing Spatial Covariance - Dataset %d - Tau %d - Trial %d/%d',i,t,trial,ALLEEG(i).trials);
+        % fprintf('\rProcessing Spatial Covariance - Dataset %d - Tau %d - Trial %d/%d',i,t,trial,ALLEEG(setlist(i)).trials);
         E=squeeze(ALLEEG(setlist(i)).data(:,t:t+duration-1,trial)); % channels x samples
         [chans,T]=size(E);
 
